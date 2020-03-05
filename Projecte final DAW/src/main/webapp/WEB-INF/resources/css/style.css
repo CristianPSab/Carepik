@@ -1,0 +1,692 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    display:-webkit-flex; 
+    display: -ms-flexbox; 
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+}
+
+#main{
+    overflow: auto;
+    padding-bottom: 100px;
+    text-align: justify;
+}
+
+h1{
+    line-height: 1.3em;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+
+h2{
+    font-size: 1.9em;
+    margin-bottom: 30px;
+    font-weight: 500; 
+    text-align: left;
+}
+
+h3{
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    /* color: #217c7c; Canviat color per fer més accessible.*/
+    color: #37c1c1;
+}
+
+p{
+    margin-bottom: 1.6em;
+    font-size: 16px;
+    color: #666666;
+    line-height: 1.8em;
+}
+
+p a{
+    color: black;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.pl-2, .px-2{
+    padding-left: 1.5rem!important;
+
+}
+
+/* INICI disseny caixa general i del login  */
+.body-login{
+    /* background: url("../img/login.jpg") no-repeat center center fixed; */
+    background-color: #f6f5f5;
+}
+.cos_contingut{
+    position: relative;
+    top: 100px;     
+}
+.box{  
+    background: #191919;
+    text-align: center; 
+    color: white;
+    opacity: 0.9;
+}
+.login{
+    padding: 40px;
+    width: 40%;
+    left: 27%; 
+    /* transform: translate(-50%,-50%);*/
+}	
+.box h1{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.box input[type="text"], .box input[type="password"], .box input[type="email"], .box select{
+    border: 0;
+    background: none;
+    display: block;
+    text-align: center;
+    border: 2px solid #a7bdbd;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.login input[type="text"], .login input[type="password"], .login input[type="email"]{
+    margin: 20px auto;
+    padding: 14px 10px;
+    width: 280px;
+}
+.login input[type="text"]:focus, .login input[type="password"]:focus,
+.login input[type="email"]:focus{
+    width: 380px;
+    border-color: #217c7c;
+}
+.box input[type="submit"], .botoMes{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #217c7c;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;    
+    cursor: pointer;
+}
+
+.box input[type="submit"]:hover{
+    background: #217c7c;
+}
+
+/* FI disseny caixa del login  */
+
+/* INICI disseny caixa del registre */
+.body-registre{
+    /* background: url("../img/aguila-montanas-nevadas.jpg") no-repeat center center fixed; */
+    background-color: #f6f5f5;
+}
+.registre{ 
+    position: relative;
+    padding: 40px;
+    width: 60%;
+    /*top: 100px;*/
+    left: 18%;    
+}
+.caixetes{
+    margin-bottom: 10%;
+    padding: 10px;
+    margin: 10px;
+    background-color:rgba(255, 255, 255, 0.05);
+    border: none;
+}
+.registre input[type="text"], .registre input[type="password"], .registre input[type="email"], .registre select{
+    margin: 0 auto 10px;
+    padding: 10px;
+    width: 80%;	
+}
+.registre select{
+    height: 50px;
+}
+.registre input[type="text"]:focus, .registre input[type="password"]:focus,
+.registre input[type="email"]:focus{
+    width: 100%;
+    border-color: #217c7c;
+}
+.registre select:focus{
+    border-color: #217c7c;
+}
+select.form-control{
+    color: #777B7D;
+    font-size: 1em;
+}
+.titol-apartats{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.titol-descripcio{
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 0.7em;
+}
+.logejarte {
+    margin-top: 2em;
+}
+.logejarte a{
+    text-decoration: none;
+    color: #37c1c1;
+}
+/* FI disseny caixa del registre */
+
+/* INICI disseny capçalera  */
+.header{
+    background: white;
+    padding: 0.5rem;
+    /*Fixar capsalera*/
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0; 
+    z-index: 5;
+}
+.header a{
+    text-decoration: none;
+}
+.contenidor{
+    flex: 1;
+    -webkit-flex: 1;    
+    -ms-flex: 1;
+    width: 95%;
+    max-width: 1300px;
+    margin: 0 auto;
+}		
+.logo-nav-container{
+    display: flex;
+    display:-webkit-flex; 
+    display: -ms-flexbox; 
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap; /* per a quan un element tingui el 100% el posi en una altra linia i no el forci a estar al 
+                         costat dels altres.Per exemple fa que el menu passi a sota del logo. */
+}
+.logo img{
+    width: 70px;
+}
+.logo-text{	
+    margin-left: 0.3em;
+    letter-spacing: 0.1em;
+    font-size: 2.3em;
+    color: #363B7C;
+    font-weight: 700;
+}
+.logo-span{	
+    color: #217C7C;
+}
+.grup-menu{	
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #363B7C;
+    font-weight: 700;
+}
+.navegacio ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.navegacio ul li{
+    display: inline-block;
+    background-color: #e4f1f1;
+}
+.navegacio ul li a{	
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #363B7C;	
+    transition: all 0.2s linear;
+    border-radius: 1.5px;
+}
+.navegacio ul li a:hover {	
+    background: #4a4a4a;
+    color: #40eded;
+}
+.menu-icon{					
+    display: none;
+}
+.menu-icon img{					
+    width: 30px;
+    position: fixed;
+    top: 30px;
+    right: 5%;
+}	
+/* FI disseny capçalera  */
+
+
+/* INICI disseny FOOTER */
+
+#footer{
+    background-color: #202020;
+    color: #C7C7C7;
+    position: relative;
+    height: 80px;
+    margin-top: 20px;
+    font-size: 0.9em;
+    text-align: center;    
+
+    /*  background-color: #202020;
+        color: #C7C7C7;
+        position: relative;
+        height: 100px;
+        margin-top: -100px;
+        clear: both;
+        padding-top: 40px;
+        font-size: 0.9em;  */
+
+}
+
+.footer-column1{
+    width: 45%;
+    float: left;
+    display: inline;
+    padding-left: 5%;
+    padding: 25px;
+
+    /*  width: 49%;
+        float: left;
+        display:inline;
+        padding-left: 15%;  */
+
+}
+
+.footer-column2{
+    width: 45%;
+    float: right;
+    display: inline;
+    padding-right: 5%;
+    padding: 25px;   
+
+    /*   width: 35%;
+       float: right;
+       display:inline;
+       padding-right: 15%;*/
+}
+
+.footer-column1 a{
+    text-decoration: none;
+    color: #37c1c1;
+}
+.footer-column2 a{
+    text-decoration: none;
+    color: #37c1c1;
+}
+/*
+.container-footer{
+    width: 100%;
+    padding: 15px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #202020;
+    color: #C7C7C7;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    margin-top: 120px;
+}
+
+
+/* FI disseny FOOTER */
+
+#consentir_cookies {
+    background-color: #217C7C;
+    display: none; 
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    margin-bottom: 0rem;
+    font-size: 0.9em;
+}
+
+.personesGrup2{
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.grup2caixes {
+    box-sizing: border-box;
+}
+.grup2caixes .col {
+    display: inline-block;
+    width: 22%;
+    margin-right: 3.5%;
+    margin-bottom: 5%;
+
+}
+.grup2caixes .col:last-of-type {
+    margin-right: 0;
+}
+
+
+
+/* INICI ROL*/
+#btnBack{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #d39e00;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;    
+    cursor: pointer;  
+}
+#btnBack:hover{
+    background-color: #ffc107;
+}
+.admin{
+    font-size: 48px;
+    padding: 15px;
+    color: yellowgreen;
+}
+.gestor{
+    font-size: 48px;
+    padding: 15px;
+    color: #ffc107; 
+}
+.lector{
+    font-size: 48px;
+    padding: 15px;
+    color: gray; 
+}
+.rols button, .rols .btn{
+    border: 0;
+    background: none;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;    
+    cursor: pointer;   
+}
+.rols .afegir{
+    border: 2px solid #28a745;
+}
+.rols .detall{
+    border:2px solid #007bff;
+}
+.rols .eliminar{
+    border:2px solid #c82333; 
+}
+
+.rols .afegir:hover{
+    background-color: #28a745;
+}
+.rols .detall:hover{
+    background-color: #007bff;  
+}
+.rols .eliminar:hover{
+    background-color: #c82333; 
+}
+
+.puntsTall{
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+/*FI ROL */
+
+/*INICI IMATGES CAMERES */  
+.imatgesCameres{
+    padding-top: 105px;
+
+}   
+.imatgesEspai{
+    margin-bottom: 1%;
+}
+.imatgesEspai img{
+    width: 100%;
+} 
+#desplegable-dies{
+    margin-left: -15px;
+    background: #191919;
+    opacity: 0.9;
+    /*margin-bottom: 10px;*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: -15px;
+    display: flex;
+    display:-webkit-flex; 
+    display: -ms-flexbox; 
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+}   
+
+#desplegable-dies h3{
+    color: #37c1c1;
+    margin-bottom: 2px;
+}     
+.botonsColumnes{
+    display: flex;
+    display:-webkit-flex; 
+    display: -ms-flexbox; 
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+}
+.botonsColumnes button{
+    flex: 0 1 auto;
+    -webkit-flex: 0 1 auto;    
+    -ms-flex: 0 1 auto;
+    margin-right: 2%;
+    padding: 1px;
+}   
+.botonsColumnes img{
+    width: 33%;
+    padding-bottom: 2px;
+}    
+.botonsColumnes .btn-info{
+    background-color: #217C7C;
+    border-color: #217C7C;
+}
+.botonsColumnes .btn-info:hover{
+    background-color: #155252;
+    border-color: #155252;
+}
+.botonsColumnes .ordre{
+    flex-grow: 2;
+    -webkit-flex-grow: 2;
+    -ms-flex-grow:2;
+}
+
+/*Botó imatges a munt */
+#aDalt {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 15px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #217c7c;
+    color: white;
+    cursor: pointer;
+    padding: 17px 20px;
+    border-radius: 50px;
+    font-size: 38px;
+    opacity: 0.85;
+}
+
+#aDalt:hover {
+    background-color: #555;
+}
+
+#imatgesOrdreAsc{
+    display: none;
+    padding-right: 0;
+}
+#imatgesOrdreDesc{
+    padding-right: 0;
+}
+
+.tempsEscollit{
+    padding: 5px 20px;
+    margin-top: 10px!important;
+    font-size: 1.8em;
+    color: #363B7C;
+    background-color: #e4f1f1;
+}
+
+.botonsColumnes .botoBorrar{
+    padding: 5px!important;
+    background-color: #7c2121;
+    border-color: #7c2121;
+}
+
+.botonsColumnes .botoBorrar:hover {
+    background-color: #521515;
+    border-color: #521515;
+}
+
+.botonsColumnes .botoBorrarActiu{
+    background-color: #bd2130;
+    border-color: #bd2130;
+}
+
+.filtresData label{
+    color: white;
+}
+
+.inputsFiltre{
+    padding: 1px 10px;
+    font-size: 1.2em;
+}
+.margeLateral{
+    margin-left: -30px;
+}
+/*FI IMATGES CAMERES */  
+
+
+
+/*RESPONSIVE*/
+/*per a menys de 830px, es a dir, mida mobil  */
+@media only screen and (max-width: 830px){
+
+    /* INICI disseny capçalera responsive */
+    .logo img{							
+        /*position: fixed;*/
+        top: 20px;
+        width: 70px;
+        margin: 0 10px 0 0;
+    }
+    .logo-text {						
+        margin-left: 0.1em;
+        font-size: 1.8em;
+        /* position: fixed;
+         top: 53px;
+         left: 100px;	*/	
+    }
+    .menu-icon {					
+        display: block;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+    }
+    .navegacio{
+        position: absolute;
+        right: 0px;
+        width: auto;
+        z-index: 1;
+        margin-top: 0.5rem;
+        text-align: right;
+    }
+    .navegacio ul{
+        display: none;
+    }
+    .navegacio ul.show{
+        display: block;
+    }
+    .navegacio ul li{
+        margin-bottom: 1px;
+        display: block;  /* canvia a ample complert */
+    }
+    .navegacio ul li a{
+        display: block;
+        padding: 0.5rem 0.5rem;
+        transition: all 0.4s linear;
+        border-radius: 1.5px;
+    }
+    .navegacio ul li a:hover {
+        background: #4a4a4a;
+    }
+    /* FI capçalera responsive */
+
+    /* INICI login responsive */
+    .login{
+        padding: 10px;
+        width: 90%;
+        left: 2.5%; 
+    }	
+    /* FI login responsive */
+
+    /* INICI registre responsive */
+    .registre{  
+        position: relative;
+        padding: 10px;
+        width: 90%;
+        top: 100px;
+        left: 2.5%;
+        margin-bottom: 20px;
+    }
+    /* FI registre responsive */
+
+    /* Footer responsive */
+    #footer{
+        height: auto;
+        margin-top: 10px;
+    }
+    .footer-column1 {
+        display: block;
+        float: none;
+        width: 100%;
+        padding: 10px;
+    }
+    .footer-column2 {
+        display: block;
+        float: none;
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* INICI GRUP2 */
+    .grup2caixes .col {
+        display: inline-block;
+        width: 95%;
+        margin-right: 3.5%;
+    }
+
+    /* INICI GRUP2 */
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 831px){
+    /* INICI GRUP2 */
+    .grup2caixes .col {
+        display: inline-block;
+        width: 45%;
+        margin-right: 3.5%;
+    }
+
+    /* FI GRUP2 */
+}
