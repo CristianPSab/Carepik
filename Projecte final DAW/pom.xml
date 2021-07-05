@@ -11,7 +11,7 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
-            <version>5.3.6.Final</version>
+            <version>5.3.6</version>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -72,7 +72,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>4.3.18</version>
+            <version>4.3.20</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
