@@ -11,7 +11,7 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
-            <version>5.3.4.Final</version>
+            <version>5.3.6.Final</version>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -27,7 +27,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>4.13.1</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
@@ -72,7 +72,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>${springframework.version}</version>
+            <version>4.3.18</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -93,7 +93,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.40</version>
+            <version>8.0.16</version>
         </dependency>
         <dependency>
             <groupId>org.glassfish.main.extras</groupId>
@@ -104,7 +104,7 @@
        <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
-            <version>2.5</version>
+            <version>2.7</version>
           <type>jar</type>
        </dependency>
        <dependency>
