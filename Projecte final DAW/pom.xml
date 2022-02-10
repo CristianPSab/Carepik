@@ -159,7 +159,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <hibernate.version>5.2.5.Final</hibernate.version>
+        <hibernate.version>5.4.24.Final</hibernate.version>
         <springframework.version>4.3.4.RELEASE</springframework.version>
     </properties>
     <build>
